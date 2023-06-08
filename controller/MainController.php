@@ -1,6 +1,7 @@
 <?php
 
-include_once("./model/database.php");
+include_once("C:".DIRECTORY_SEPARATOR."laragon".DIRECTORY_SEPARATOR."www".DIRECTORY_SEPARATOR."sksk".DIRECTORY_SEPARATOR."config.php");
+include_once(Config::Database);
 
 class MainController
 {

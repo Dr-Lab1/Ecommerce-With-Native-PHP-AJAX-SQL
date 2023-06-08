@@ -10,10 +10,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="tpInterface/Semantic-UI/semantic.css">
+    <link rel="stylesheet" type="text/css" href="../view/Semantic ui/Semantic-UI/semantic.css">
 
-    <script type="text/javascript" src="tpInterface/Libs/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="./tpInterface/Semantic-UI/semantic.js"></script>
+    <script type="text/javascript" src="../view/Semantic ui/Libs/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../view/Semantic ui/Semantic-UI/semantic.js"></script>
 
 
 

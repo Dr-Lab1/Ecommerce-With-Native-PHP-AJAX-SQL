@@ -1,9 +1,10 @@
 <?php
-/* View */
-include_once("./view/header.php");
 
 /* Controller */
-include_once("./controller/MainController.php");
+include_once("C:".DIRECTORY_SEPARATOR."laragon".DIRECTORY_SEPARATOR."www".DIRECTORY_SEPARATOR."sksk".DIRECTORY_SEPARATOR."controller".DIRECTORY_SEPARATOR."MainController.php");
+
+/* View */
+include_once(Config::Header);
 
 $main = new MainController();
 $products = $main->allProducts();
@@ -18,7 +19,7 @@ $products = $main->allProducts();
     </div>
 
     <div class="column right floated">
-        <button class="ui primary button right floated">Découvrir</button>
+        <a href="./view/products.php" class="ui primary button right floated">Découvrir</a href="./view/products.php">
     </div>
 </div>
 <!-- end - Best product -->
@@ -48,9 +49,9 @@ $products = $main->allProducts();
                 </div>
                 <div class="extra content">
                     <div class="">
-                        <button class="ui primary button">
+                        <a href="#" class="ui primary button">
                             Voir le produit
-                        </button>
+                        </a>
                         <div class="ui button">
                             <i class="heart icon"></i>
                         </div>
@@ -99,7 +100,7 @@ $products = $main->allProducts();
     </div>
 
     <div class="column right floated">
-        <button class="ui primary button right floated">Découvrir</button>
+        <a href="./view/products.php" class="ui primary button right floated">Découvrir</a>
     </div>
 </div>
 <!-- end - Discover -->
@@ -270,5 +271,5 @@ $products = $main->allProducts();
 <!-- end Blog -->
 
 <?php
-include_once("./view/footer.php");
+include_once(Config::Footer);
 ?>
