@@ -26,11 +26,11 @@ $products = $main->product($id_product);
 
 <hr>
 
-<div class="ui two column stackable grid">
+<div class="ui centered two column stackable grid">
 
     <?php foreach ($products as $item) { ?>
 
-        <div class="column">
+        <div class="row">
             <div class="ui card">
                 <div class="image">
                     <img src="<?= $item["img_path"] ?>">
