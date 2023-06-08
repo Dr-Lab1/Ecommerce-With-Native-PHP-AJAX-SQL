@@ -1,5 +1,13 @@
-<?php 
-    include_once("./view/header.php");
+<?php
+/* View */
+include_once("./view/header.php");
+
+/* Controller */
+include_once("./controller/MainController.php");
+
+$main = new MainController();
+$products = $main->allProducts();
+
 ?>
 
 <!-- start - Best product -->
@@ -21,88 +29,39 @@
 </h1>
 
 <div class="ui four column stackable grid">
-    <div class="column">
-        <div class="ui card">
-            <div class="image">
-                <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/8.webp">
-            </div>
-            <div class="content">
-                <p>Prix : <span class="header" style="font-size: large; color: black; font-weight: bold;">100 $</span></p>
-                <div class="meta">
-                    <span class="date">Color : Blue</span>
-                </div>
-                <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                </div>
-            </div>
-            <div class="extra content">
-                <div class="">
-                    <button class="ui primary button">
-                        Voir le produit
-                    </button>
-                    <div class="ui button">
-                        <i class="heart icon"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="column">
-        <div class="ui card">
-            <div class="image">
-                <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/8.webp">
-            </div>
-            <div class="content">
-                <p>Prix : <span class="header" style="font-size: large; color: black; font-weight: bold;">100 $</span></p>
-                <div class="meta">
-                    <span class="date">Color : Blue</span>
-                </div>
-                <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                </div>
-            </div>
-            <div class="extra content">
-                <div class="">
-                    <button class="ui primary button">
-                        Voir le produit
-                    </button>
-                    <div class="ui button">
-                        <i class="heart icon"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php foreach ($products as $item) { ?>
 
-    <div class="column">
-        <div class="ui card">
-            <div class="image">
-                <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/8.webp">
-            </div>
-            <div class="content">
-                <p>Prix : <span class="header" style="font-size: large; color: black; font-weight: bold;">100 $</span></p>
-                <div class="meta">
-                    <span class="date">Color : Blue</span>
+        <div class="column">
+            <div class="ui card">
+                <div class="image">
+                    <img src="<?= $item["img_path"] ?>">
                 </div>
-                <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                <div class="content">
+                    <p>Prix : <span class="header" style="font-size: large; color: black; font-weight: bold;"><?= $item["prix_ht"] ?> $</span></p>
+                    <div class="description">
+                        <?= $item["name"] ?>
+                    </div>
+                    <div class="meta">
+                        <span class="date">Color : Blue</span>
+                    </div>
                 </div>
-            </div>
-            <div class="extra content">
-                <div class="">
-                    <button class="ui primary button">
-                        Voir le produit
-                    </button>
-                    <div class="ui button">
-                        <i class="heart icon"></i>
+                <div class="extra content">
+                    <div class="">
+                        <button class="ui primary button">
+                            Voir le produit
+                        </button>
+                        <div class="ui button">
+                            <i class="heart icon"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="column">
+    <?php } ?>
+
+    <!-- <div class="column">
         <div class="ui card">
             <div class="image">
                 <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/8.webp">
@@ -127,7 +86,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    
 </div>
 <!-- end products -->
 
@@ -309,6 +269,6 @@
 </div>
 <!-- end Blog -->
 
-<?php 
-    include_once("./view/footer.php");
+<?php
+include_once("./view/footer.php");
 ?>

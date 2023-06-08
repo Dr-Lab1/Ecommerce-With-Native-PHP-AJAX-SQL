@@ -1,7 +1,5 @@
 <?php
 
-use Database as GlobalDatabase;
-
 class Database {
 
     private $bdd;
@@ -10,11 +8,26 @@ class Database {
     {
         try {
 
-            $this->bdd = new PDO("mysql:host=localhost;dbname=e-commerce", "root", "");    
+            $this->bdd = new PDO("mysql:host=localhost;dbname=bxbsmart", "root", "");    
         
         } catch (Error $e) {
             die($e);
         }
+    }
+
+    public function allProducts() {
+        try {
+
+            $products_array = $this->bdd->prepare("SELECT * FROM products");
+            $products_array->execute();
+
+            $products = $products_array->fetchAll(PDO::FETCH_ASSOC);
+        
+        } catch (Error $e) {
+            die($e);
+        }
+
+        return $products;
     }
 }
 
