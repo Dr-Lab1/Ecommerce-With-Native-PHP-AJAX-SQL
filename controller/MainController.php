@@ -18,4 +18,10 @@ class MainController
         //
         return $this->database->allProducts();
     }
+
+    public function product($id)
+    {
+        //
+        return $this->database->product($id);
+    }
 }

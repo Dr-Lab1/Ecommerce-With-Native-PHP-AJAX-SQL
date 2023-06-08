@@ -29,6 +29,23 @@ class Database {
 
         return $products;
     }
+
+    public function product($id) {
+        try {
+
+            $products_array = $this->bdd->prepare("SELECT * FROM products WHERE id=:id");
+            $products_array->execute(array(
+                "id" => $id
+            ));
+
+            $products = $products_array->fetchAll(PDO::FETCH_ASSOC);
+        
+        } catch (Error $e) {
+            die($e);
+        }
+
+        return $products;
+    }
 }
 
 ?>
