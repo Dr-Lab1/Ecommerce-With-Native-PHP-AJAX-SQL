@@ -54,7 +54,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <!-- end navbard -->
 
-        <!-- start - Discover -->
+        <!-- start - Best product -->
         <div class="ui two column blue message grid">
             <div class="column">
                 <h1>Des meilleurs produits avec <br> les meilleures offres</h1>
@@ -65,7 +65,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <button class="ui primary button right floated">Découvrir</button>
             </div>
         </div>
-        <!-- end - Discover -->
+        <!-- end - Best product -->
 
         <!-- start products -->
         <h1>
