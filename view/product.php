@@ -14,7 +14,7 @@ $products = $main->product($id_product);
 
 <!-- start products -->
 <h1>
-    Produits
+    Produit selectionné
 </h1>
 
 <h4>
@@ -47,7 +47,7 @@ $products = $main->product($id_product);
                 <div class="extra content">
                     <div class="">
                         <a href="#" class="ui primary button">
-                            Voir le produit
+                            Ajouter au panier
                         </a>
                         <div class="ui button">
                             <i class="heart icon"></i>

@@ -44,7 +44,7 @@ $products = $main->allProducts();
                 </div>
                 <div class="extra content">
                     <div class="">
-                        <a href="#" class="ui primary button">
+                        <a href="./product.php?id_product=<?= $item['id'] ?>" class="ui primary button">
                             Voir le produit
                         </a>
                         <div class="ui button">
