@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="Semantic-UI/semantic.css">
+
+        <script type="text/javascript" src="Libs/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="Semantic-UI/semantic.js"></script>
+        <script type="text/javascript" src="controler/controler.js"></script>
+
+
+    </head>
+    <body>
+
+        <div class="ui segment" style=" margin: 10px 20px; ">
+
+            <div class="ui top attached tabular menu">
+                <a class="item active" data-tab="first"><i class="orange edit icon"></i> Formulaire</a>
+                <a class="item" data-tab="second" onclick="afficher();">Tableau</a>
+                <a class="item" data-tab="third">report</a>
+            </div>
+            <div class="ui bottom attached tab segment active" data-tab="first">
+
+                <form class="ui mini form formulaire_Client">
+                    <h4 class="ui dividing header">Identité</h4>
+                   
+
+                        <div class="two fields">
+
+                            <div class="field">
+                                <label>Nom</label>
+                                <input type="text" name="nom" id="nomClient" placeholder="First Name">
+                            </div>
+
+                            <div class="field">
+                                <label>Postnom</label>
+                                <input type="text" name="postnom" placeholder="Last Name">
+                            </div>
+
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>Prenom</label>
+                                <input type="text" name="prenom"   placeholder="Last Name">
+                            </div>
+
+                            <div class="field">
+                                <label>Sexe</label>
+                                <div class="ui selection dropdown">
+
+                                    <input type="hidden" name="gender">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Gender</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="M"><i class="male icon"></i>Masculin</div>
+                                        <div class="item" data-value="F"><i class="female icon"></i>Feminin</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="ui mini buttons">
+                            <a class="ui negative button " id="button_enregistrer"><i class="cancel icon"></i>Annuler</a>
+                            <div class="or"></div>
+                            <a class="ui positive button button_enregistrer"><i class="checkmark icon"></i>Enregistrer</a>
+                        </div>
+                </form>
+
+          </div>
+            <div class="ui bottom attached tab segment" data-tab="second">
+                <table class="ui celled table">
+                    <thead>
+                        <tr><th>Nom</th>
+                            <th>Postnom</th>
+                            <th>prenom</th>
+                            <th>sexe</th>
+                            <th>Action</th>
+                            
+                        </tr></thead>
+                    <tbody id="contenu">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui bottom attached tab segment" data-tab="third">
+                Third
+            </div>
+
+        </div>
+
+
+    </body>
+</html>
