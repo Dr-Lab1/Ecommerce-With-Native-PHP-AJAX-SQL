@@ -15,6 +15,15 @@ $products = $main->allProducts();
     Produits
 </h1>
 
+<h4>
+    <?php
+        echo count($products);
+    ?>
+    articles trouvés
+</h4>
+
+<hr>
+
 <div class="ui four column stackable grid">
 
     <?php foreach ($products as $item) { ?>
