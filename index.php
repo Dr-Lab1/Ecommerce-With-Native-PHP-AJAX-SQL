@@ -1,10 +1,9 @@
 <?php
 
-/* Controller */
-include_once("C:".DIRECTORY_SEPARATOR."laragon".DIRECTORY_SEPARATOR."www".DIRECTORY_SEPARATOR."sksk".DIRECTORY_SEPARATOR."controller".DIRECTORY_SEPARATOR."MainController.php");
+include_once "includes.php";
 
 /* View */
-include_once(Config::Header);
+include_once(Header);
 
 $main = new MainController();
 $products = $main->allProducts();
@@ -271,5 +270,5 @@ $products = $main->allProducts();
 <!-- end Blog -->
 
 <?php
-include_once(Config::Footer);
+    include_once(Footer);
 ?>

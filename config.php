@@ -1,16 +1,14 @@
 <?php
 
-class Config {
+/* Système */
+define('DS', DIRECTORY_SEPARATOR);
+define("ROOT", $_SERVER["DOCUMENT_ROOT"]);
 
-    /* Model */
-    public const Database = "C:".DIRECTORY_SEPARATOR."laragon".DIRECTORY_SEPARATOR."www".DIRECTORY_SEPARATOR."sksk".DIRECTORY_SEPARATOR."model".DIRECTORY_SEPARATOR."database.php";
+/* View */
+define("Header", ROOT.DS."view".DS."header.php");
+define("Footer", ROOT.DS."view".DS."footer.php");
 
-    /* View */
-    public const Header = "C:".DIRECTORY_SEPARATOR."laragon".DIRECTORY_SEPARATOR."www".DIRECTORY_SEPARATOR."sksk".DIRECTORY_SEPARATOR."view".DIRECTORY_SEPARATOR."header.php";
-    public const Footer = "C:".DIRECTORY_SEPARATOR."laragon".DIRECTORY_SEPARATOR."www".DIRECTORY_SEPARATOR."sksk".DIRECTORY_SEPARATOR."view".DIRECTORY_SEPARATOR."footer.php";
+/* Model */
+define("Database", ROOT."model".DS."database.php");
 
-    /* Links */
-    public const x = "C:".DIRECTORY_SEPARATOR."laragon".DIRECTORY_SEPARATOR."www".DIRECTORY_SEPARATOR."sksk".DIRECTORY_SEPARATOR."view".DIRECTORY_SEPARATOR."footer.php";
-
-}
-
+?>

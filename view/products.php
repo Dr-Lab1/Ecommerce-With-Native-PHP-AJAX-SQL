@@ -1,10 +1,9 @@
 <?php
 
-/* Controller */
-include_once("../controller/MainController.php");
+include_once dirname(__DIR__,1).DIRECTORY_SEPARATOR."includes.php";
 
 /* View */
-include_once(Config::Header);
+include_once(Header);
 
 $main = new MainController();
 $products = $main->allProducts();
