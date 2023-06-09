@@ -1,13 +1,13 @@
 <?php
 
-include_once "includes.php";
+include_once "../includes.php";
 
 /* View */
 include_once(Header);
 
 $main = new MainController();
 $products = $main->allProducts();
-// var_dump($main->allProducts()); die;
+
 ?>
 
 <!-- start - Best product -->
