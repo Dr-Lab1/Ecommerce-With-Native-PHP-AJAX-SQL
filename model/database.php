@@ -66,6 +66,23 @@ class Database {
 
     }
 
+    public function updateProduct($id, $name, $description, $prix_ht, $category_id) {
+        try {
+
+            $products_array = $this->bdd->prepare("UPDATE products SET name=:name, description=:description, prix_ht=:prix_ht, category_id=:category_id WHERE id=:id");
+            $result = $products_array->execute(array(
+                "id" => $id,
+                "name" => $name,
+                "description" => $description,
+                "prix_ht" => $prix_ht,
+                "category_id" => $category_id
+            ));
+
+        } catch (Error $e) {
+            die($e);
+        }
+    }
+
     public function lastProduct() {
         try {
 

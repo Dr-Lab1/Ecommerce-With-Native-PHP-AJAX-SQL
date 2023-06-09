@@ -13,6 +13,7 @@ define("Index", ".".DS."index.php");
 define("Products", ".".DS."products.php");
 define("Dashboard", ".".DS."dashboard.php");
 define("Add", ".".DS."add.php");
+define("Update", ".".DS."update.php");
 
 
 /* Model */

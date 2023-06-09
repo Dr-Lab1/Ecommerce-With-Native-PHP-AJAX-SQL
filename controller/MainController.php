@@ -45,6 +45,26 @@ class MainController
         header("Location: ./dashboard.php");
     }
 
+    public function updateProduct($formulaire) {
+
+        // var_dump($formulaire);
+        // die;
+
+        $last = $this->database->lastProduct();
+        $id = $last['id'] + 1;
+        
+        $nom = $formulaire["nom"];
+        $description = $formulaire["description"];
+        $couleur = $formulaire["couleur"];
+        $prix = $formulaire["prix"];
+        $devise = $formulaire["devise"];
+        $categorie = $formulaire["categorie"];
+
+        $this->database->updateProduct($id, $nom, $description, $prix, $categorie);
+
+        header("Location: ./dashboard.php");
+    }
+
     private function setMedia($path)
     {
         if($path['image']['error'] == 0)
@@ -74,7 +94,7 @@ class MainController
             }
             else
             {
-                // echo '<script>alert("Les photos uniquement")</script>';
+                echo '<script>alert("Les photos uniquement")</script>';
             }
         }
     }
