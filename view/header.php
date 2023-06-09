@@ -1,4 +1,6 @@
-<?php 
+<?php
+$main = new MainController();
+$categories = $main->categories();
 ?>
 
 <!DOCTYPE html>
@@ -31,19 +33,26 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <a href="<?= Products ?>" class="item">
                     <i class="grid layout icon"></i> Produits
                 </a>
-                <a class="item">
-                    <i class="mail icon"></i> Messages
-                </a>
+                <div class="ui simple dropdown item">
+                    Produits
+
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <?php foreach ($categories as $item) { ?>
+                            <a href="<?= Login ?>" class="item"> <?= $item['name'] ?> </a>
+                        <?php } ?>
+
+                    </div>
+                </div>
                 <div class="ui simple dropdown item">
                     Voir plus
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <?php if(isset($_SESSION['user'])) { ?>
-                        <a class="item"><i class="user icon"></i> <?= $_SESSION['user']['username'] ?> </a>
-                        <?php } 
-                            else { 
+                        <?php if (isset($_SESSION['user'])) { ?>
+                            <a class="item"><i class="user icon"></i> <?= $_SESSION['user']['username'] ?> </a>
+                        <?php } else {
                         ?>
-                        <a href="<?= Login ?>" class="item"><i class="user icon"></i> Se Connecter </a>
+                            <a href="<?= Login ?>" class="item"><i class="user icon"></i> Se Connecter </a>
                         <?php } ?>
 
                         <a href="<?= Dashboard ?>" class="item"><i class="globe icon"></i> Dashboard </a>

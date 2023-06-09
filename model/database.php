@@ -124,6 +124,19 @@ class Database {
 
         return $user;
     }
+
+    public function categories() {
+        try {
+            $categories = $this->bdd->prepare("SELECT * FROM categories");
+            $categories->execute();
+
+            $categories = $categories->fetchAll(PDO::FETCH_ASSOC);
+        } catch(Exception $e) {
+            die($e);
+        }
+
+        return $categories;
+    }
 }
 
 ?>

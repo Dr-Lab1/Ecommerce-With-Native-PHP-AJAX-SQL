@@ -126,4 +126,8 @@ class MainController
             $_SESSION['email'] = $email;
         }
     }
+
+    public function categories() {
+        return $this->database->categories();
+    }
 }
