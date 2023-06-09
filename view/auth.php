@@ -1,3 +1,21 @@
+<?php
+
+include_once "../includes.php";
+
+$email = isset($_POST['email']) ? $_POST['email'] : NULL;
+$password = isset($_POST['password']) ? $_POST['password'] : NULL;
+
+$error = isset($_COOKIE['error']) ? $_COOKIE['error'] : NULL;
+
+$email_error = isset($_COOKIE['email']) ? $_COOKIE['email'] : NULL;
+
+$main = new MainController();
+if (isset($email) and isset($password)) {
+  $products = $main->login($email, $password);
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -80,10 +98,24 @@
       </a>
       <form action="" method="POST" class="ui large form">
         <div class="ui stacked segment">
+          <?php if(isset($_COOKIE['email'])) { ?>
+            <div class="ui red message">
+              Email ou mot de passe incorrect
+            </div>
+          <?php } ?>
+
           <div class="field">
             <div class="ui left icon input">
               <i class="user icon"></i>
-              <input type="text" name="email" placeholder="Addresse e-mail">
+              <?php 
+                if(isset($_COOKIE['email'])) {
+              ?>
+                <input type="email" name="email" placeholder="Addresse e-mail" value="<?= $_COOKIE['email'] ?>">
+              <?php
+                } else {
+              ?>
+              <input type="email" name="email" placeholder="Addresse e-mail">
+              <?php } ?>
             </div>
           </div>
           <div class="field">
@@ -92,7 +124,9 @@
               <input type="password" name="password" placeholder="Mot de passe">
             </div>
           </div>
-          <div class="ui fluid large blue submit button">Se connecter</div>
+          <button type="submit" class="ui fluid large blue submit button">
+            Se connecter
+          </button>
         </div>
 
         <div class="ui error message"></div>

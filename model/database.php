@@ -100,13 +100,29 @@ class Database {
 
     public function deleteProduct($id) {
         try {
-            $product = $this->bdd->prepare("DELETE FROM products where id=:id");
+            $product = $this->bdd->prepare("DELETE FROM products WHERE id=:id");
             $product->execute(array(
                 "id" => $id
             ));
         } catch(Exception $e) {
             die($e);
         }
+    }
+
+    public function login($email, $password) {
+        try {
+            $user = $this->bdd->prepare("SELECT * FROM users WHERE email=:email AND password=:password");
+            $user->execute(array(
+                "email" => $email,
+                "password" => $password
+            ));
+
+            $user = $user->fetch(PDO::FETCH_ASSOC);
+        } catch(Exception $e) {
+            die($e);
+        }
+
+        return $user;
     }
 }
 
