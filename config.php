@@ -10,7 +10,9 @@ define("Footer", ROOT.DS."view".DS."footer.php");
 
 /* Route */
 define("Index", ".".DS."index.php");
-define("Products", "view".DS."products.php");
+define("Products", ".".DS."products.php");
+define("Dashboard", ".".DS."dashboard.php");
+define("Add", ".".DS."add.php");
 
 
 /* Model */

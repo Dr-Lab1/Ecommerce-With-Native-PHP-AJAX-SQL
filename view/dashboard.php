@@ -15,7 +15,7 @@ if(empty($_POST)) {
 
             <h2>ENREGISTRER UN NOUVEAU PRODUIT</h2>
 
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
 
                 <p class="ui red message"> <span style="color: black;">*</span>Remplissez tous les champs !</p>
 
@@ -38,18 +38,18 @@ if(empty($_POST)) {
                                 <div class="field">
                                     <label for="">L'image du produit</label>
                                     <div class="ui input">
-                                        <input type="file" name="img" id="">
+                                        <input type="file" name="image" id="">
                                     </div>
                                 </div>
                                 <div class="field">
                                     <label for="">Couleur</label>
                                     <div class="ui left icon input">
                                         <select id="" required name="couleur">
-                                            <option value="bleu">Bleu</option>
-                                            <option value="rouge">Rouge</option>
-                                            <option value="rouge">Rouge</option>
-                                            <option value="rouge">Rouge</option>
-                                            <option value="rouge">Rouge</option>
+                                            <option value="Blanc">Blanc</option>
+                                            <option value="Bleu">Bleu</option>
+                                            <option value="Rouge">Rouge</option>
+                                            <option value="Jaune">Jaune</option>
+                                            <option value="Vert">Vert</option>
                                         </select>
 
                                     </div>
