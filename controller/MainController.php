@@ -106,24 +106,24 @@ class MainController
 
     public function login ($email, $password) {
 
-        $_COOKIE['error'] = false;
+        $_SESSION['error'] = false;
 
         $password = sha1($password);
         if($user = $this->database->login($email, $password)) {
             // var_dump($user);
-            $_COOKIE['user'] = [
+            $_SESSION['user'] = [
                                 "username" => $user['name'],
                                 "email" => $user['email'],
                                 "id" => $user['id']
                                 ];
 
-            $_COOKIE['error'] = false;
+            $_SESSION['error'] = false;
 
             header("Location: ./index.php");
         }
         else {
-            $_COOKIE['error'] = true;
-            $_COOKIE['email'] = $email;
+            $_SESSION['error'] = true;
+            $_SESSION['email'] = $email;
         }
     }
 }
