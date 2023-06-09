@@ -7,7 +7,7 @@ include_once(Header);
 
 $main = new MainController();
 $products = $main->allProducts();
-
+// var_dump($main->allProducts()); die;
 ?>
 
 <!-- start - Best product -->
