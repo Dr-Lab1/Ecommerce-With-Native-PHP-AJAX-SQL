@@ -38,7 +38,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     Voir plus
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <a class="item"><i class="edit icon"></i> Jonathan Bahati </a>
+                        <a class="item"><i class="user icon"></i> Jonathan Bahati </a>
+                        <a href="<?= Login ?>" class="item"><i class="user icon"></i> Se Connecter </a>
                         <a href="<?= Dashboard ?>" class="item"><i class="globe icon"></i> Dashboard </a>
                         <a class="item"><i class="settings icon"></i> Déconnexion </a>
                     </div>
