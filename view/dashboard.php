@@ -6,8 +6,13 @@ include_once "../includes.php";
 include_once(Header);
 
 $main = new MainController();
+
+if(isset($_POST['delete'])) {
+    $main->deleteProduct($_POST['delete']);
+}
+
 $products = $main->allProducts();
-if (empty($_POST)) {
+
 ?>
     <div class="ui segment container">
 
@@ -32,7 +37,7 @@ if (empty($_POST)) {
 
                     <?php foreach ($products as $item) { ?>
 
-                        <div class="column">
+                        <form action="" method="POST" class="column">
                             <div class="ui card">
                                 <div class="image">
                                     <img src="<?= $item["img_path"] ?>">
@@ -48,13 +53,14 @@ if (empty($_POST)) {
                                 </div>
                                 <div class="extra content">
                                     <div class="">
-                                        <a href="/view/product.php?id_product=<?= $item['id'] ?>" class="ui red button">
+                                        <input type="text" value="<?= $item['id'] ?>" hidden name="delete">
+                                        <button type="submit" class="ui red button">
                                             Supprimer
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
 
                     <?php } ?>
 
@@ -67,8 +73,6 @@ if (empty($_POST)) {
     </div>
 
 <?php
-} else {
-    $main->createProduct($_POST);
-}
+
 include_once(Footer);
 ?>

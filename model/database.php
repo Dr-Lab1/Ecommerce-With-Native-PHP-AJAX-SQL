@@ -80,6 +80,17 @@ class Database {
 
         return $product;
     }
+
+    public function deleteProduct($id) {
+        try {
+            $product = $this->bdd->prepare("DELETE FROM products where id=:id");
+            $product->execute(array(
+                "id" => $id
+            ));
+        } catch(Exception $e) {
+            die($e);
+        }
+    }
 }
 
 ?>

@@ -42,7 +42,7 @@ class MainController
 
         $this->database->createProduct($id, $nom, $description, $prix, $path, $categorie);
 
-        header("Location: ../index.php");
+        header("Location: ./dashboard.php");
     }
 
     private function setMedia($path)
@@ -77,5 +77,9 @@ class MainController
                 // echo '<script>alert("Les photos uniquement")</script>';
             }
         }
+    }
+
+    public function deleteProduct($id) {
+        $this->database->deleteProduct($id);
     }
 }

@@ -38,7 +38,7 @@ if(empty($_POST)) {
                                 <div class="field">
                                     <label for="">L'image du produit</label>
                                     <div class="ui input">
-                                        <input type="file" name="image" id="">
+                                        <input type="file" name="image" id="" require>
                                     </div>
                                 </div>
                                 <div class="field">
