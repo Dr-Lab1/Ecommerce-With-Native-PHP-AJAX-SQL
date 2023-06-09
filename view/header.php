@@ -41,7 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <i class="dropdown icon"></i>
                     <div class="menu">
                         <?php foreach ($categories as $item) { ?>
-                            <a href="<?= Login ?>" class="item"> <?= $item['name'] ?> </a>
+                            <a href="<?= Category ?>?category_id=<?= $item['id'] ?>" class="item"> <?= $item['name'] ?> </a>
                         <?php } ?>
 
                     </div>

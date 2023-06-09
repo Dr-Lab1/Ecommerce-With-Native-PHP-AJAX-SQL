@@ -17,6 +17,7 @@ define("Add", ".".DS."add.php");
 define("Update", ".".DS."update.php");
 define("Login", ".".DS."auth.php");
 define("Logout", ".".DS."logout.php");
+define("Category", ".".DS."category.php");
 
 
 /* Model */

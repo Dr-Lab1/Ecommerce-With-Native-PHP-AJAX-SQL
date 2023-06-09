@@ -137,6 +137,37 @@ class Database {
 
         return $categories;
     }
+
+    public function byCategory($id) {
+        try {
+            $products = $this->bdd->prepare("SELECT * FROM products WHERE category_id=:id");
+            $products->execute([
+                "id" => $id
+            ]);
+
+            $products = $products->fetchAll(PDO::FETCH_ASSOC);
+        } catch(Exception $e) {
+            die($e);
+        }
+
+        return $products;
+    }
+
+    public function category($id) {
+        try {
+            $category = $this->bdd->prepare("SELECT * FROM categories WHERE id=:id");
+            $category->execute([
+                "id" => $id
+            ]);
+
+            $category = $category->fetch(PDO::FETCH_ASSOC);
+        } catch(Exception $e) {
+            die($e);
+        }
+
+        return $category;
+    }
+
 }
 
 ?>

@@ -135,4 +135,16 @@ class MainController
         session_destroy();
         header("Location: ./index.php");
     }
+
+    public function byCategory($id)
+    {
+        //
+        return $this->database->byCategory($id);
+    }
+
+    public function category($id)
+    {
+        //
+        return $this->database->category($id);
+    }
 }

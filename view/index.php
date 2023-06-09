@@ -53,7 +53,7 @@ $products = $main->allProducts();
                         </a>
                         <?php if (isset($_SESSION['user'])) { ?>
                             <div class="ui button">
-                                <i class="heart icon"></i>
+                                <i class="red heart icon"></i>
                             </div>
                         <?php  
                             }
@@ -65,33 +65,6 @@ $products = $main->allProducts();
         </div>
 
     <?php } ?>
-
-    <!-- <div class="column">
-        <div class="ui card">
-            <div class="image">
-                <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/8.webp">
-            </div>
-            <div class="content">
-                <p>Prix : <span class="header" style="font-size: large; color: black; font-weight: bold;">100 $</span></p>
-                <div class="meta">
-                    <span class="date">Color : Blue</span>
-                </div>
-                <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                </div>
-            </div>
-            <div class="extra content">
-                <div class="">
-                    <button class="ui primary button">
-                        Voir le produit
-                    </button>
-                    <div class="ui button">
-                        <i class="heart icon"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
 </div>
 <!-- end products -->
