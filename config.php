@@ -16,6 +16,7 @@ define("Dashboard", ".".DS."dashboard.php");
 define("Add", ".".DS."add.php");
 define("Update", ".".DS."update.php");
 define("Login", ".".DS."auth.php");
+define("Logout", ".".DS."logout.php");
 
 
 /* Model */

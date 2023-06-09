@@ -7,6 +7,7 @@ include_once(Header);
 
 $main = new MainController();
 $products = $main->allProducts();
+$categories = $main->categories();
 if(empty($_POST)) {
 ?>
 <div class="ui segment container">
@@ -80,8 +81,13 @@ if(empty($_POST)) {
                                     <label for="">Catégorie</label>
                                     <div class="ui input">
                                         <select id="" required name="categorie">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
+                                            <?php 
+                                                foreach($categories as $item) { 
+                                            ?>
+                                            <option value="<?= $item['id'] ?>"><?= $item['name'] ?></option>
+                                            <?php 
+                                                }
+                                            ?>
                                         </select>
 
                                     </div>

@@ -130,4 +130,9 @@ class MainController
     public function categories() {
         return $this->database->categories();
     }
+
+    public function logout() {
+        session_destroy();
+        header("Location: ./index.php");
+    }
 }

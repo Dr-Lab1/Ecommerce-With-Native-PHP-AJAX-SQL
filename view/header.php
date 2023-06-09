@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $main = new MainController();
 $categories = $main->categories();
 ?>
@@ -34,7 +36,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <i class="grid layout icon"></i> Produits
                 </a>
                 <div class="ui simple dropdown item">
-                    Produits
+                    Catégories
 
                     <i class="dropdown icon"></i>
                     <div class="menu">
@@ -54,9 +56,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         ?>
                             <a href="<?= Login ?>" class="item"><i class="user icon"></i> Se Connecter </a>
                         <?php } ?>
-
                         <a href="<?= Dashboard ?>" class="item"><i class="globe icon"></i> Dashboard </a>
-                        <a class="item"><i class="settings icon"></i> Déconnexion </a>
+                        <?php if (isset($_SESSION['user'])) { ?>
+                            <a href="<?= Logout ?>"" class="item"><i class="settings icon"></i> Déconnexion </a>
+                        <?php }
+                        ?>
                     </div>
                 </div>
                 <div class="ui search right item">

@@ -1,4 +1,5 @@
 <?php
+session_start(); // ready to go!
 
 include_once "../includes.php";
 

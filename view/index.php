@@ -51,9 +51,14 @@ $products = $main->allProducts();
                         <a href="/view/product.php?id_product=<?= $item['id'] ?>" class="ui primary button">
                             Voir le produit
                         </a>
-                        <div class="ui button">
-                            <i class="heart icon"></i>
-                        </div>
+                        <?php if (isset($_SESSION['user'])) { ?>
+                            <div class="ui button">
+                                <i class="heart icon"></i>
+                            </div>
+                        <?php  
+                            }
+                        ?>
+
                     </div>
                 </div>
             </div>
@@ -87,7 +92,7 @@ $products = $main->allProducts();
             </div>
         </div>
     </div> -->
-    
+
 </div>
 <!-- end products -->
 
@@ -270,5 +275,5 @@ $products = $main->allProducts();
 <!-- end Blog -->
 
 <?php
-    include_once(Footer);
+include_once(Footer);
 ?>
