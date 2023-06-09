@@ -7,67 +7,107 @@ include_once(Header);
 
 $main = new MainController();
 $products = $main->allProducts();
-if (empty($_POST)) {
+if(empty($_POST)) {
 ?>
-    <div class="ui segment container">
+<div class="ui segment container">
+    <body>
+        <div class="ui container">
 
-        <body>
-            <div class="ui container">
+            <h2>ENREGISTRER UN NOUVEAU PRODUIT</h2>
 
-                <div class="ui four column stackable grid">
-                    <div class="column">
-                        <h2>Voir les produits</h2>
-                    </div>
+            <form action="" method="post" enctype="multipart/form-data">
 
+                <p class="ui red message"> <span style="color: black;">*</span>Remplissez tous les champs !</p>
 
-                    <div class="column">
-                        <a href="<?= Add ?>" class="ui primary button">
-                            Ajouter un produit
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="ui six column stackable grid">
-
-                    <?php foreach ($products as $item) { ?>
-
+                <div class="ui segment">
+                    <div class="ui two column very relaxed grid">
                         <div class="column">
-                            <div class="ui card">
-                                <div class="image">
-                                    <img src="<?= $item["img_path"] ?>">
-                                </div>
-                                <div class="content">
-                                    <p>Prix : <span class="header" style="font-size: large; color: black; font-weight: bold;"><?= $item["prix_ht"] ?> $</span></p>
-                                    <div class="description">
-                                        <?= $item["name"] ?>
-                                    </div>
-                                    <div class="meta">
-                                        <span class="date">Color : Blue</span>
+                            <div class="ui form">
+                                <div class="field">
+                                    <label for="">Nom du produit</label>
+                                    <div class="ui input">
+                                        <input type="text" placeholder="Nom du produit" required name="nom">
                                     </div>
                                 </div>
-                                <div class="extra content">
-                                    <div class="">
-                                        <a href="/view/product.php?id_product=<?= $item['id'] ?>" class="ui red button">
-                                            Supprimer
-                                        </a>
+                                <div class="field">
+                                    <label for="">Description</label>
+                                    <div class="ui input">
+                                        <textarea name="description" id="" rows="1" required placeholder="Description"></textarea>
                                     </div>
                                 </div>
+                                <div class="field">
+                                    <label for="">L'image du produit</label>
+                                    <div class="ui input">
+                                        <input type="file" name="image" id="">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label for="">Couleur</label>
+                                    <div class="ui left icon input">
+                                        <select id="" required name="couleur">
+                                            <option value="Blanc">Blanc</option>
+                                            <option value="Bleu">Bleu</option>
+                                            <option value="Rouge">Rouge</option>
+                                            <option value="Jaune">Jaune</option>
+                                            <option value="Vert">Vert</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ui form">
+                                <div class="field">
+                                    <label for="">Prix du produit</label>
+                                    <div class="ui input" required>
+                                        <input type="number" placeholder="Prix du produit" name="prix" required>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label for="">Dévise</label>
+                                    <div class="ui input">
+                                        <select id="" required name="devise">
+                                            <option value="FC">Franc congolais</option>
+                                            <option value="Dollars">Dollars</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label for="">Catégorie</label>
+                                    <div class="ui input">
+                                        <select id="" required name="categorie">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="field" style="margin-top: 25px;">
+                                    <div class="ui red button"> Annuler </div>
+                                    <button type="submit" class="ui blue submit button">S'enregistrer</button>
+                                </div>
+                                
                             </div>
                         </div>
 
-                    <?php } ?>
 
+                    </div>
                 </div>
+            </form>
 
-            </div>
+        </div>
 
-        </body>
+    </body>
 
-    </div>
+</div>
 
 <?php
-} else {
+}
+else {
     $main->createProduct($_POST);
 }
 include_once(Footer);
