@@ -72,7 +72,7 @@ if(empty($_POST)) {
                                     <div class="ui input">
                                         <select id="" required name="devise">
                                             <option value="FC">Franc congolais</option>
-                                            <option value="Dollars">Dollars</option>
+                                            <option value="$">Dollars</option>
                                         </select>
 
                                     </div>

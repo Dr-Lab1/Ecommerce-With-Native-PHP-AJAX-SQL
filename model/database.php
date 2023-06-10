@@ -47,17 +47,19 @@ class Database {
         return $product;
     }
 
-    public function createProduct($id, $name, $description, $prix_ht, $img_path, $category_id) {
+    public function createProduct($id, $name, $description, $prix_ht, $img_path, $category_id, $couleur, $devise) {
         try {
 
-            $products_array = $this->bdd->prepare("INSERT INTO products VALUES (:id, :name, :description, :prix_ht, :img_path, :category_id)");
+            $products_array = $this->bdd->prepare("INSERT INTO products VALUES (:id, :name, :description, :prix_ht, :img_path, :category_id, :couleur, :devise)");
             $products_array->execute(array(
                 "id" => $id,
                 "name" => $name,
                 "description" => $description,
                 "prix_ht" => $prix_ht,
                 "img_path" => $img_path,
-                "category_id" => $category_id
+                "category_id" => $category_id,
+                "couleur" => $couleur,
+                "devise" => $devise
             ));
 
         } catch (Error $e) {

@@ -52,11 +52,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <div class="menu">
                         <?php if (isset($_SESSION['user'])) { ?>
                             <a class="item"><i class="user icon"></i> <?= $_SESSION['user']['username'] ?> </a>
+                            <a href="<?= Dashboard ?>" class="item"><i class="globe icon"></i> Dashboard </a>
+
                         <?php } else {
                         ?>
                             <a href="<?= Login ?>" class="item"><i class="user icon"></i> Se Connecter </a>
                         <?php } ?>
-                        <a href="<?= Dashboard ?>" class="item"><i class="globe icon"></i> Dashboard </a>
                         <?php if (isset($_SESSION['user'])) { ?>
                             <a href="<?= Logout ?>"" class="item"><i class="settings icon"></i> Déconnexion </a>
                         <?php }

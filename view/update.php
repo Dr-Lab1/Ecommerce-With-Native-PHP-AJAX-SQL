@@ -22,7 +22,7 @@ if(empty($_POST)) {
                 <?php foreach($product as $item) {?>
                 <div class="ui segment">
                     <div class="ui three column very relaxed grid">
-                    <div class="image">
+                            <div class="ui column image">
                                 <img src="<?= $item["img_path"] ?>">
                             </div>
                         <div class="column">

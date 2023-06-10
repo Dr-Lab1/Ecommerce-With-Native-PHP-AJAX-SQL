@@ -38,7 +38,7 @@ $products = $main->allProducts();
                 <?php foreach ($products as $item) { ?>
 
                     <form action="" method="POST" class="column">
-                        <div class="ui card">
+                        <div class="ui card" style="height: 100%;">
                             <div class="image">
                                 <img src="<?= $item["img_path"] ?>">
                             </div>

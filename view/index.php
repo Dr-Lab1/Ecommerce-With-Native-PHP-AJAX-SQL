@@ -18,7 +18,7 @@ $products = $main->allProducts();
     </div>
 
     <div class="column right floated">
-        <a href="./view/products.php" class="ui primary button right floated">Découvrir</a href="./view/products.php">
+        <a href="./products.php" class="ui primary button right floated">Découvrir</a href="./view/products.php">
     </div>
 </div>
 <!-- end - Best product -->
@@ -33,17 +33,17 @@ $products = $main->allProducts();
     <?php foreach ($products as $item) { ?>
 
         <div class="column">
-            <div class="ui card">
+            <div class="ui card" style="height: 100%;">
                 <div class="image">
                     <img src="<?= $item["img_path"] ?>">
                 </div>
                 <div class="content">
-                    <p>Prix : <span class="header" style="font-size: large; color: black; font-weight: bold;"><?= $item["prix_ht"] ?> $</span></p>
+                    <p>Prix : <span class="header" style="font-size: large; color: black; font-weight: bold;"><?= $item["prix_ht"] ?> <?= $item['devise'] ?></span></p>
                     <div class="description">
                         <?= $item["name"] ?>
                     </div>
                     <div class="meta">
-                        <span class="date">Color : Blue</span>
+                        <span class="date">Couleur: <?= $item['couleur'] ?></span>
                     </div>
                 </div>
                 <div class="extra content">
@@ -77,7 +77,7 @@ $products = $main->allProducts();
     </div>
 
     <div class="column right floated">
-        <a href="./view/products.php" class="ui primary button right floated">Découvrir</a>
+        <a href="./products.php" class="ui primary button right floated">Découvrir</a>
     </div>
 </div>
 <!-- end - Discover -->

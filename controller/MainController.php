@@ -35,7 +35,7 @@ class MainController
     public function createProduct($formulaire)
     {
 
-        // var_dump($_FILES);
+        // var_dump($formulaire); die;
         $last = $this->database->lastProduct();
         $id = $last['id'] + 1;
 
@@ -48,7 +48,7 @@ class MainController
         $devise = $formulaire["devise"];
         $categorie = $formulaire["categorie"];
 
-        $this->database->createProduct($id, $nom, $description, $prix, $path, $categorie);
+        $this->database->createProduct($id, $nom, $description, $prix, $path, $categorie, $couleur, $devise);
 
         header("Location: ./dashboard.php");
     }
