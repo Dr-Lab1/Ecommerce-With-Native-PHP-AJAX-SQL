@@ -13,3 +13,5 @@ Disponible, gratuit et ouvert à tous
 * Vous pouvez aussi utilisez le CLI de GitHub :
 
         gh repo clone Dr-Lab1/Ecommerce-With-Native-PHP-AJAX-SQL
+
+# Comment est structuré le projet ?
