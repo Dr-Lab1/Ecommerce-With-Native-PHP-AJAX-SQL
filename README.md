@@ -16,6 +16,6 @@ Disponible, gratuit et ouvert à tous
 
 # Comment est structuré le projet ?
 Le projet utilise l'architecture M.V.C :
-        * Model
-        * View
-        * Controller
+* Model
+* View
+* Controller
