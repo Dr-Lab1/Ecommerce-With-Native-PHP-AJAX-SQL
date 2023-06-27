@@ -19,3 +19,5 @@ Le projet utilise l'architecture M.V.C :
 * Model : dossier où sont implementées toutes les classes traitant avec la base de données
 * View : dossier où sont implementées toutes les classes traitant avec les vues de l'application
 * Controller : dossier où sont implementées toutes les classes traitant avec la logique de l'application
+
+# Comment cela fonctionne ?
