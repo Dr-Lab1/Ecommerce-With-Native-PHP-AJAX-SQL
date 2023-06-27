@@ -21,3 +21,6 @@ Le projet utilise l'architecture M.V.C :
 * Controller : dossier où sont implementées toutes les classes traitant avec la logique de l'application
 
 # Comment cela fonctionne ?
+**Fichier à la RACINE - ROOT**
+
+- .htaccess : 
