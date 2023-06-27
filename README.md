@@ -15,3 +15,7 @@ Disponible, gratuit et ouvert à tous
         gh repo clone Dr-Lab1/Ecommerce-With-Native-PHP-AJAX-SQL
 
 # Comment est structuré le projet ?
+Le projet utilise l'architecture M.V.C :
+        * Model
+        * View
+        * Controller
