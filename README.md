@@ -10,3 +10,6 @@ Disponible, gratuit et ouvert à tous
 * Vous pouvez faire un git clone :
 
         git clone https://github.com/Dr-Lab1/Ecommerce-With-Native-PHP-AJAX-SQL.git
+* Vous pouvez aussi utilisez le CLI de GitHub :
+
+        gh repo clone Dr-Lab1/Ecommerce-With-Native-PHP-AJAX-SQL
