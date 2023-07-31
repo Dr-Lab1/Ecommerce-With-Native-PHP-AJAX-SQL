@@ -25,3 +25,4 @@ Le projet utilise l'architecture M.V.C :
 
 * .htaccess : Lorsque la session commence, l'utilisateur se trouve dans la racine du programme. Ce fichier sera le premier à être déclencher et son rôle sera de rediriger la session dans le dossier view
 * Dans le dossier view, un autre fichier .htaccess va être déclencher pour ouvrir le fichier index.php du projet
+* Les fichiers
